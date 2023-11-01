@@ -1,0 +1,21 @@
+[package]
+name = "cached-store-gcs"
+version = "0.1.0"
+authors = ["jangjunha <hi@jangjunha.me>"]
+description = "GCS store implementation for cached"
+repository = "https://github.com/jangjunha/cached-store-gcs"
+documentation = "https://docs.rs/cached-store-gcs"
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.74"
+cached = { version = "0.46.0", features = ["async"] }
+chrono = { version = "0.4.31", features = ["serde"] }
+google-cloud-storage = "0.14.0"
+http = "0.2.9"
+serde = "1.0.190"
+serde_json = "1.0.108"
+thiserror = "1.0.50"
+tokio = { version = "1.33.0", features = ["macros", "sync"] }
