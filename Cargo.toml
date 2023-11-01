@@ -1,6 +1,6 @@
 [package]
 name = "cached-store-gcs"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["jangjunha <hi@jangjunha.me>"]
 description = "GCS store implementation for cached"
 repository = "https://github.com/jangjunha/cached-store-gcs"
