@@ -9,11 +9,17 @@ readme = "README.md"
 license = "MIT"
 edition = "2021"
 
+[features]
+default = ["default-tls"]
+
+default-tls = ["google-cloud-storage/default-tls"]
+rustls-tls = ["google-cloud-storage/rustls-tls"]
+
 [dependencies]
 async-trait = "0.1.74"
 cached = { version = "0.46.0", features = ["async"] }
 chrono = { version = "0.4.31", features = ["serde"] }
-google-cloud-storage = "0.14.0"
+google-cloud-storage = { version = "0.14.0", default-features = false, features = ["auth"] }
 http = "0.2.9"
 serde = "1.0.190"
 serde_json = "1.0.108"
